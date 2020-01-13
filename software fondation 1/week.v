@@ -20,3 +20,9 @@ Definition next_weekday (d:day) : day :=
 
 Compute (next_weekday friday).
 (* ==> monday : day *)
+
+Compute (next_weekday (next_weekday saturday)).
+(* ==> tuesday : day *)
+
+Example test_next_weekday:
+  (next_weekday (next_weekday saturday)) = tuesday.
